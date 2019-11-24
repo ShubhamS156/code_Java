@@ -16,5 +16,7 @@ public class collectionSort{
 		Collections.sort(city);
 		System.out.println("After sorting City ArrayList: ");
 		System.out.println(city);
+		String ci=city.get(1);
+		System.out.println(ci);
 	}
 }

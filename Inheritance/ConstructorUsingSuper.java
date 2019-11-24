@@ -1,14 +1,15 @@
 class Super{
-	public Super(String msg){
-		System.out.println("COnstructor of super class is called");
-		System.out.println(msg);
+	public Super(){
+		System.out.println("Constructor of super class is called");
+		System.out.println("hey");
 	}
 }
 class Sub extends Super{
 	String msg="illePode";
 	public Sub(){
-		super("hey");
-		System.out.println("Constructor of sub class called");
+		super();
+			System.out.println("Constructor of sub class called");
+
 	}
 }
 

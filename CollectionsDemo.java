@@ -1,13 +1,13 @@
-package utility;
 
 import java.util.Collections;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionsDemo {
-
+	 int x=20;
 	public static void main(String[] args) {
-		List<String> studentList = new ArrayList();
+		ArrayList<String> studentList = new ArrayList<String>();
+		
 		studentList.add("Neeraj");
 		studentList.add("Mahesh");
 		studentList.add("Armaan");
@@ -19,6 +19,7 @@ public class CollectionsDemo {
 		System.out.println("Original List " + studentList);
 
 		Collections.sort(studentList);
+
 		System.out.println("Sorted alphabetically List " + studentList);
 
 		Collections.reverse(studentList);

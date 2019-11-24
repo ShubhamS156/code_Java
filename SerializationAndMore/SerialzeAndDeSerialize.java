@@ -1,4 +1,4 @@
-import java.io.*;
+ import java.io.*;
 
 class ToSerialize implements java.io.Serializable{
 	public int a;
@@ -6,7 +6,7 @@ class ToSerialize implements java.io.Serializable{
 
 	public void setMethod(int x,String y){
 		a=x;
-		b=y;
+    b=y;
 	}
 }
 
@@ -14,8 +14,7 @@ public class SerialzeAndDeSerialize{
 public static void main(String[] args) {
 	ToSerialize obj1=new ToSerialize();
 	String fileName="sederialize.txt";
-
-	obj1.setMethod(7,"Shubham");
+	obj1.setMethod(74,"Shubham");
 
 	try{
 	 FileOutputStream file=new FileOutputStream(fileName);
@@ -30,14 +29,15 @@ public static void main(String[] args) {
 	  catch(IOException ex){
 	  	System.out.println("IOException is caught");
 	  }
+    //deserialisation
 
 	  ToSerialize obj2=null;
 	  try{
-	  	FileInputStream file=new FileInputStream(fileName);
-	  	ObjectInputStream in=new ObjectInputStream(file);
+	  	FileInputStream file1=new FileInputStream(fileName);
+	  	ObjectInputStream in=new ObjectInputStream(file1);
 	  	obj2=(ToSerialize)in.readObject();
 	  	in.close();
-	  	file.close();
+	  	file1.close();
 	  	System.out.println("object deserialized");
 	  	System.out.println("a= "+obj2.a);
 	  	System.out.println("b= "+obj2.b);
@@ -46,6 +46,7 @@ public static void main(String[] args) {
 	  catch(IOException ex){
 	  	System.out.println("IOException is caught");
 	  }
+
 	  catch(ClassNotFoundException ex){
 	  	System.out.println("Class Not Found Exception");
 	  }

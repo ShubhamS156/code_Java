@@ -8,7 +8,7 @@ public class MyThreadInterface implements Runnable{
 		int z=5;
 		Thread t=new Thread(new MyThreadInterface());
 		t.start();
-		
+
 }
 	}
 

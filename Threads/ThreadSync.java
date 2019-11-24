@@ -3,10 +3,10 @@ import java.io.*;
 
 class Sender{
 	public void Send(String msg){
-		
+
 		System.out.println("Sending msg: \t"+msg);
 		try{
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		}
 		catch(Exception e){
 			System.out.println("Thread Interrupted");
@@ -22,7 +22,7 @@ class MyThreadSender extends Thread{
 	public MyThreadSender(String msg,Sender obj){
 		message=msg;
 		snd=obj;
-		
+
 		}
 	public void run(){
 
